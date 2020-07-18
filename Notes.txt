@@ -1,0 +1,49 @@
+Just general thoughts and notes to keep track of
+
+==========Next Steps // To Do==========
+
+- add a drop down menu for sorting algorithms
+
+- add a "sort" button
+
+- implement a console only version of a sorting algorithms
+
+- render the graph after the array has been sorted
+
+- start looking into visualizing the sorting
+    - timers to slow down the process?
+    - different colors for different situations (cell in final spot, pointer cell, cells being swapped, etc...)
+
+- add various sorting algorithms (as many as reasonably possible)
+
+- debug; look for edge cases or minor improvements
+
+- implement some of the listed possible improvements down below
+
+==========Possible improvements==========
+
+scalability:
+    - For arrays much larger than 75 in size, cells would have to become much skinnier in order to fit the screen.
+    Eliminating the numbers all together at that point and just displaying the cells with their sizes and no
+    numbers would allow for this to happen. You could also reduce the size of the text, but at that point it would be
+    so small that it would either be too diffocult or simply not worth reading.
+
+    - There would have to be some sort of cutoff point because the cells will only be able to be so small to fit
+    the screen. A possible approach would be to set a max based on the width of the given users screen. Because a
+    user using a 72-inch monitor would fit vastly more cells than an 8-inch monitor would fit. We shouldn't limit
+    the cell count to a certain number because the amound that could fit would be different on every screen.
+
+handling negative numbers:
+    - My approach would be to place the axis of the graph in the center of the screen, so that there is an equal
+    amount of room for positive and negative numbers to extend. This would cause the heights of each cell to be
+    significantly shorter but it would allow for a decent visualization of negative numbers.
+
+different levels of sortedness:
+    - Give the user an option to choose different levels of sortedness to see how different algorithms fair
+    against a variety of sortedness (random, 'mostly sorted', reversed, etc...)
+
+
+extra data:
+    -Display the time and space complexity of a given sorting algorithm
+    -Display the number of swaps, comparisons, etc.. after each sort
+    -Give interesting or notable info about each sorting algorithm

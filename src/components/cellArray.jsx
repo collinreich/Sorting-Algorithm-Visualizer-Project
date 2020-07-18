@@ -1,54 +1,6 @@
 import React, { Component } from "react";
 
 class CellArray extends Component {
-  state = {
-    array: [],
-  };
-
-  /**
-   * Generates a random number between
-   * a given min and max.
-   * (inclusive min, exclusive max)
-   *
-   * @param {number} min
-   * @param {number} max
-   * @returns random number between min and max
-   * @memberof CellArray
-   */
-  getRandomNumber(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
-
-  /**
-   * Builds an array of a given size using
-   * random numbers from getRandomNumber().
-   * Updates the array in the state to be equal
-   * to the newly created array.
-   *
-   * @param {number} size given desired size of the array
-   * @memberof CellArray
-   */
-  buildNewArray(size) {
-    let arr = [];
-    for (var i = 0; i < size; i++) {
-      arr[i] = this.getRandomNumber(4, 100);
-    }
-    this.setState({ array: arr });
-  }
-
-  /**
-   * Calls buildNewArray() with desired
-   * array size immediately after cellArray
-   * component has been mounted.
-   *
-   * @memberof CellArray
-   */
-  componentDidMount() {
-    this.buildNewArray(20);
-  }
-
   /**
    * Returns all the classes needed for
    * each individual cell in the array.
@@ -100,7 +52,7 @@ class CellArray extends Component {
   render() {
     return (
       <div className={this.getArrayContainerClasses()}>
-        {this.state.array.map((value, index) => (
+        {this.props.array.map((value, index) => (
           <div
             style={this.getCellHeights(value)}
             className={this.getCellClasses()}
