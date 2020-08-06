@@ -2,25 +2,40 @@ Just general thoughts and notes to keep track of
 
 ==========Next Steps // To Do==========
 
-- add a drop down menu for sorting algorithms
-
-- add a "sort" button
-
-- implement a console only version of a sorting algorithms
-
-- render the graph after the array has been sorted
-
 - start looking into visualizing the sorting
     - timers to slow down the process?
     - different colors for different situations (cell in final spot, pointer cell, cells being swapped, etc...)
 
 - add various sorting algorithms (as many as reasonably possible)
 
+- make everything fully responsive, including changing the laptop screen size and 
+trying it out on a different monitor altogeher
+
 - debug; look for edge cases or minor improvements
+
+- implement the "general better practices" listed below
 
 - implement some of the listed possible improvements down below
 
 ==========Possible improvements==========
+
+general better practices or quick improvements:
+    - See if sortedArray in handleSort() in App.js needs to even be reset to undefined. Might be unnecessary code and 
+    will look like I don't know what I'm doing.
+    - Look to move all sorting algorithm methods and helper methods to another file that can just be imported. Maybe static?
+    - Refactor so that the algorithm state value being stored doesn't have to be reformatted to be displayed. It's extra code,
+    and you can just make the stored value be exactly what the displayed value should be.
+    - Use an enum instead of a string for identifying which algorithm is currently selected
+    - Use a map function for generating the algorithm option buttons in the dropdown menu
+    in the navbar. There is a lot of redundant code. Only difficulty would be specifying each unique id.
+
+appearance:
+    - Put the sort button and the algorithm drop down on the far left. It's the most important it should go first.
+    - Find another color besides "info".
+
+speed:
+    - Be able to choose different speeds when sorting; maybe another dropdown
+    - Or set different sorting speedds depending on the size of the array.
 
 scalability:
     - For arrays much larger than 75 in size, cells would have to become much skinnier in order to fit the screen.
@@ -41,6 +56,9 @@ handling negative numbers:
 different levels of sortedness:
     - Give the user an option to choose different levels of sortedness to see how different algorithms fair
     against a variety of sortedness (random, 'mostly sorted', reversed, etc...)
+
+sorting direction choice
+    -Let the user choose if they want to sort smallest to greatest or greatest to smallest
 
 
 extra data:
