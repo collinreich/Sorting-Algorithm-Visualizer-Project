@@ -65,7 +65,7 @@ const NavBar = (props) => {
         Sort!
       </button>
       <button
-        className="btn btn-outline-primary btn-lg nav-item"
+        className="btn btn-outline-primary btn-lg nav-item ml-2"
         onClick={props.onColorTest}
       >
         Color Test

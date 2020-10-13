@@ -135,9 +135,11 @@ class App extends Component {
     for (let i = 1; i < arr.length; i++) {
       let temp = i - 1;
       let current = arr[i];
+      /* -- Attempting to start animating
       setTimeout(() => {
         animationArray[temp].style.backgroundColor = "red";
       }, temp * 1000);
+      */
       while (arr[temp] > current) {
         arr[temp + 1] = arr[temp];
         temp = temp - 1;
