@@ -10,3 +10,6 @@ sorting algorithms. The project is still in production and incomplete. The next 
 animate the currently implemented algorithms, and then eventually add many more algorithms to visualize.
 
 The project can be found here:
+https://collinreich.github.io/Sorting-Algorithm-Visualizer-Project/
+
+Enjoy!
