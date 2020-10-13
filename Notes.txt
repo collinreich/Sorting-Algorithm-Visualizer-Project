@@ -19,7 +19,13 @@ trying it out on a different monitor altogeher
 
 ==========Possible improvements==========
 
+
+known bugs:
+    - Generating a new array while an animation in running will allow the animation to continue running in the new array.
+    The option to change the sorting algorithm or generate a new array should be disabled while an animation is running.
+
 general better practices or quick improvements:
+    - Go through to fix all magic numbers and magic strings
     - See if sortedArray in handleSort() in App.js needs to even be reset to undefined. Might be unnecessary code and 
     will look like I don't know what I'm doing.
     - Look to move all sorting algorithm methods and helper methods to another file that can just be imported. Maybe static?

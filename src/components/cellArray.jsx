@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+const LIGHT_BLUE = "lightblue";
+
 class CellArray extends Component {
   /**
    * Returns all the classes needed for
@@ -10,7 +12,7 @@ class CellArray extends Component {
    */
   getCellClasses() {
     let classes =
-      "bg-info text-center border border-dark\
+      "array-cell text-center border border-dark\
       text-white font-weight-bold flex-grow-1";
     return classes;
   }
@@ -41,10 +43,11 @@ class CellArray extends Component {
    *          property for the cell
    * @memberof CellArray
    */
-  getCellHeights(value) {
+  getCellStyles(value) {
     let size = value * 6;
     let cellHeight = {
       height: size,
+      backgroundColor: LIGHT_BLUE,
     };
     return cellHeight;
   }
@@ -54,7 +57,7 @@ class CellArray extends Component {
       <div className={this.getArrayContainerClasses()}>
         {this.props.array.map((value, index) => (
           <div
-            style={this.getCellHeights(value)}
+            style={this.getCellStyles(value)}
             className={this.getCellClasses()}
             key={index}
           >

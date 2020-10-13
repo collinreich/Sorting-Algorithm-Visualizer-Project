@@ -64,6 +64,12 @@ const NavBar = (props) => {
       >
         Sort!
       </button>
+      <button
+        className="btn btn-outline-primary btn-lg nav-item"
+        onClick={props.onColorTest}
+      >
+        Color Test
+      </button>
     </nav>
   );
 };

@@ -131,9 +131,13 @@ class App extends Component {
    * @memberof App
    */
   insertionSort(arr) {
+    let animationArray = document.getElementsByClassName("array-cell");
     for (let i = 1; i < arr.length; i++) {
       let temp = i - 1;
       let current = arr[i];
+      setTimeout(() => {
+        animationArray[temp].style.backgroundColor = "red";
+      }, temp * 1000);
       while (arr[temp] > current) {
         arr[temp + 1] = arr[temp];
         temp = temp - 1;
@@ -250,6 +254,22 @@ class App extends Component {
     }
   };
 
+  testColorChange() {
+    let array = document.getElementsByClassName("array-cell");
+    for (let i = 0; i <= array.length; i++) {
+      setTimeout(() => {
+        if (i < array.length) {
+          array[i].style.backgroundColor = "magenta";
+        }
+      }, i * 10);
+      setTimeout(() => {
+        if (i - 1 !== -1) {
+          array[i - 1].style.backgroundColor = "lightblue";
+        }
+      }, i * 10);
+    }
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -259,6 +279,7 @@ class App extends Component {
           onAlgorithmSelect={this.handleAlgorithmSelect}
           onDisplayAlgorithm={this.handleDisplayAlgorithm()}
           onSort={this.handleSort}
+          onColorTest={this.testColorChange}
         />
         <main className="container">
           <CellArray array={this.state.array} />
